@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang ="es">
+    <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width"> 
+            <title>CMMJ</title>
+            <link rel="stylesheet" href="reset.css"> 
+            <link rel="stylesheet" href="style.css">
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header >
+            <div>
+                <h1>Carlos Misael Martinez Jimenez</h1>
+                <p class="titulo">"Pasion por la tecnologia"</p>
+            </div>
+        </header>
+        <main>
+            <h2>Acerca de mi </h2>
+            <p >Ingeniero en Computacion de la UNAM con Diplomado en 
+                Creación de Videojuegos, Ambientes Virtuales y 
+                Aplicaciones Multimedia; Desarrollador independiente de 
+                videojuegos, Desarrollador Trainee BackEnd Certificado 
+                por Oracle, Editor de Videos y  Apasionado del Hardware </p>
+        </main>
+        <main class="contenedor-tarjetas">
+            <section class="tarjeta">
+                <h3>Ingeniero en Computacion</h3>
+                <p class="tarjeta">texto de prueba largo 
+                    para ver que se sale de rango  
+                    y probrear que tanto rango de
+                     adaptacion tiene</p>
+            </section>
+            <section class="tarjeta">
+                <h3>Desarrollador independiente de videojuegos</h3>
+                <p class="tarjeta">texto de prueba largo 
+                    para ver que se sale de rango  
+                    y probrear que tanto rango de
+                     adaptacion tiene</p>
+            </section>
+
+        <section class="tarjeta">
+            <h3>Desarrollador Trainee BackEnd Certificado por Oracle</h3>
+                <p class="tarjeta">texto de prueba largo 
+                    para ver que se sale de rango  
+                    y probrear que tanto rango de
+                     adaptacion tiene</p>
+        </section>
+        <section class="tarjeta">
+            <h2>Portafolio</h2>
+                <p class="tarjeta">texto de prueba largo 
+                    para ver que se sale de rango  
+                    y probrear que tanto rango de
+                     adaptacion tiene</p>
+        </section>
+        </main>
+
+        <div>
+            <h4>Contacto</h4>
+            <p class="contacto">Correo: car_mis_mar@hotmail.com </p>
+            <p class="contacto">Telefono: 5610937345</p>
+            <p class="contacto"></p>
+        </div>
+        
+        
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.body.classList.add("fade-in");
+
+    const links = document.querySelectorAll("a[href]:not([target])");
+
+    links.forEach(link => {
+      link.addEventListener("click", e => {
+        e.preventDefault();
+        const url = link.href;
+        document.body.classList.remove("fade-in");
+        document.body.classList.add("fade-out");
+        setTimeout(() => {
+          window.location = url;
+        }, 400); // coincide con duración .fade-out
+      });
+    });
+  });
+</script>
+    </body>
+
+</html>
