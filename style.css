@@ -15,7 +15,7 @@
 
     --font-encabezado: 3rem;
     --font-lg: 2.25rem;
-    --font-md: 1.5rem;
+    --font-md: 1.4rem;
     --font-sm: 1rem;
 }
 
@@ -137,17 +137,21 @@ main.contenedor-tarjetas {
     background: white;
     padding: 2rem;
     border-radius: 8px;
-    flex: 1 1 250px; /* permite responsividad */
-    max-width: 300px;
-    min-height: 280px;
+    flex: 1 1 250px; /* Allows responsiveness based on a minimum width */
+    max-width: 300px; /* Caps the maximum width of the card */
+    min-height: auto; /* CRITICAL: Ensures the card's height grows with its content */
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Distributes space within the card, good for headers/footers */
     transition: transform 0.2s;
-    word-wrap: break-word;
-    overflow: hidden;
-
+    word-wrap: break-word; 
+    overflow: visible;
+    /* Prevents long words/URLs from overflowing horizontally */
+    /* REMOVE or ENSURE 'overflow: visible;' */
+    /* If you had 'overflow: hidden;' before, simply deleting that line
+       will make the card adapt. 'visible' is the default value, so explicitly
+       setting it isn't always necessary but can be helpful for clarity. */
 }
 
 .tarjeta:hover {
@@ -177,4 +181,37 @@ footer {
     padding: 1rem;
     font-size: 0.9rem;
     color: #666;
+}
+
+
+.link-certificaciones {
+    display: inline-block;
+    background: linear-gradient(135deg, #317baf, #00ad80);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+.tarjeta ul li {
+    margin-bottom: 0.8rem; 
+}
+
+.tarjeta ul li:last-child {
+    margin-bottom: 0;
+}
+.boton-descarga {
+    display: inline-block;
+    background: linear-gradient(135deg, #317baf, #00ad80);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.boton-descarga:hover {
+    background: linear-gradient(135deg, #20c997, #317baf);
 }
